@@ -17,8 +17,9 @@ export const Sidebar = ({className}: SidebarProps) => {
                 {[cls.collapsed]: collapsed},
                 [className])}
         >
-            <Toggle callback={setCollapsed} isHidden={collapsed}/>
-
+            <div className={cls.toggle}>
+                <Toggle callback={setCollapsed} isHidden={collapsed}/>
+            </div>
             <div className={cls.switchers}>
                 <ThemeSwitcher />
             </div>
