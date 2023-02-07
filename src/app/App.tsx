@@ -6,12 +6,12 @@ import { AppRouter }  from 'app/providers/router';
 import { Navbar }     from 'widgest/Navbar';
 
 const App = () => {
-    const {theme, changeTheme} = useTheme();
+    const {theme} = useTheme();
 
     return (
         <div className={classNames('app', {}, [theme])}>
             <Navbar/>
-            <button onClick={changeTheme}> Поменять тему</button>
+
             <AppRouter />
         </div>
     );
