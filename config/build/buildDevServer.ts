@@ -8,5 +8,6 @@ export function buildDevServer(options: BuildOptions): DevServerConfiguration {
         // Если true: Открывает автоматически страницу в браузере
         open: true,
         historyApiFallback: true,
+        hot: true,
     }
 }
