@@ -1,10 +1,9 @@
-import { classNames }          from 'shared/lib/classNames/classNames';
-import cls                     from './Toggle.module.scss';
+import { classNames } from 'shared/lib/classNames/classNames';
 import { Button, ThemeButton } from 'shared/ui/Button/Button';
-import React, { useState }     from 'react';
-import ArrowRight              from 'shared/assets/icons/arrow-right.svg';
-import ArrowLeft              from 'shared/assets/icons/arrow-left.svg';
-
+import ArrowRight from 'shared/assets/icons/arrow-right.svg';
+import ArrowLeft from 'shared/assets/icons/arrow-left.svg';
+import React from 'react';
+import cls from './Toggle.module.scss';
 
 interface ToggleProps {
     className?: string;
@@ -12,11 +11,10 @@ interface ToggleProps {
     isHidden: boolean;
 }
 
-export const Toggle = ({className, callback, isHidden}: ToggleProps) => {
-
+export const Toggle = ({ className, callback, isHidden }: ToggleProps) => {
     const onToggle = () => {
-        callback(prev => !prev);
-    }
+        callback((prev) => !prev);
+    };
 
     return (
         <Button
@@ -26,8 +24,8 @@ export const Toggle = ({className, callback, isHidden}: ToggleProps) => {
         >
             {
                 isHidden
-                ? <ArrowRight />
-                : <ArrowLeft />
+                    ? <ArrowRight />
+                    : <ArrowLeft />
             }
         </Button>
     );

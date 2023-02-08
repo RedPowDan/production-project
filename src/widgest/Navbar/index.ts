@@ -1,3 +1,3 @@
 import { Navbar } from 'widgest/Navbar/ui/Navbar';
 
-export { Navbar }
+export { Navbar };
