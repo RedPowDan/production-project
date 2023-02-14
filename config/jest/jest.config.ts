@@ -34,6 +34,9 @@ export default {
         // Обнаружена разница между МАК ОС и ВИНДОУС!!!
         '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)',
     ],
+    modulePaths: [
+        '<rootDir>src',
+    ],
     rootDir: '../../',
     // Indicates whether the coverage information should be collected while executing the test
     // collectCoverage: false,
