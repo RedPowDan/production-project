@@ -11,7 +11,14 @@ interface ToggleProps {
     isHidden: boolean;
 }
 
-export const Toggle = ({ className, callback, isHidden }: ToggleProps) => {
+export const Toggle = (props: ToggleProps) => {
+    const {
+        className,
+        callback,
+        isHidden,
+        ...otherProps
+    } = props;
+
     const onToggle = () => {
         callback((prev) => !prev);
     };
@@ -21,6 +28,7 @@ export const Toggle = ({ className, callback, isHidden }: ToggleProps) => {
             className={classNames(cls.ThemeSwitcher, {}, [className])}
             onClick={onToggle}
             theme={ThemeButton.CLEAR}
+            {...otherProps}
         >
             {
                 isHidden
