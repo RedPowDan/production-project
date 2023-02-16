@@ -32,7 +32,4 @@ jobs:
         run: npm run lint:scss
 
       - name: Запускаю unit тесты
-        run: npm run test unit
-
-      - name: Запускаю unit тесты
-        run: npm run test unit
+        run: npm run test:unit
