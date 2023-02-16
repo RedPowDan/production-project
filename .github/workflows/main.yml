@@ -7,10 +7,10 @@ on:
     branches: [master]
 jobs:
   pipeline:
-    runs-on: ubuntu-latest
+    runs-on: windows-2019
     strategy:
       matrix:
-        node-version: [ 17.x ]
+        node-version: [16.x]
 
     steps:
       - uses: actions/checkout@v2
@@ -31,7 +31,7 @@ jobs:
       - name: Запускаю linting scss
         run: npm run lint:scss
 
-      - name: Запускаю build-storybook тесты
+      - name: Запускаю build-storybook
         run: npm run build-storybook
 
       - name: Запускаю test:ui:ci тесты
