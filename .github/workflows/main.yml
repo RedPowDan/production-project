@@ -31,5 +31,8 @@ jobs:
       - name: Запускаю linting scss
         run: npm run lint:scss
 
-      - name: Запускаю unit тесты
-        run: npm run test:unit
+      - name: Запускаю build-storybook тесты
+        run: npm run build-storybook
+
+      - name: Запускаю test:ui:ci тесты
+        run: npm run test:ui:ci
