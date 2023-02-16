@@ -49,7 +49,7 @@ module.exports = {
             },
         ],
         'max-len': ['error', { ignoreComments: true, code: 100 }],
-        // 'linebreak-style': ['error', process.platform === 'win32' ? 'windows' : 'unix'],
+        'linebreak-style': 0,
     },
     globals: {
         __IS_DEV__: true,
