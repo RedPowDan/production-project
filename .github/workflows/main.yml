@@ -14,7 +14,7 @@ jobs:
 
     steps:
       - uses: actions/chechout@v2
-      - name: Starng Node.js ${{ matrix.node-version }}
+      - name: Staring Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@1
         with:
           node-version: ${{ matrix.node-version }}
