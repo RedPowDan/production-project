@@ -1,8 +1,10 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Button, ThemeButton } from 'shared/ui/Button/Button';
 import ArrowRight from 'shared/assets/icons/arrow-right.svg';
-import ArrowLeft from 'shared/assets/icons/arrow-left.svg';
 import React from 'react';
+import ArrowLeft from 'shared/assets/icons/arrow-left.svg';
+
+import cls from './Toggle.module.scss';
 
 interface ToggleProps {
     className?: string;
@@ -24,7 +26,7 @@ export const Toggle = (props: ToggleProps) => {
 
     return (
         <Button
-            className={classNames('', {}, [className])}
+            className={classNames(cls.Toggle, {}, [className])}
             onClick={onToggle}
             theme={ThemeButton.CLEAR}
             {...otherProps}
