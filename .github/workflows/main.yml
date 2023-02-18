@@ -25,14 +25,22 @@ jobs:
       - name: Собираю проект в продакшн сборке
         run: npm run build
 
+        if: always()
       - name: Запускаю linting
         run: npm run lint:ts
 
+        if: always()
       - name: Запускаю linting scss
         run: npm run lint:scss
 
+        if: always()
+      - name: Запускаю unit тесты
+        run: npm run test:unit
+
+        if: always()
       - name: Запускаю build-storybook
         run: npm run build-storybook
 
+        if: always()
       - name: Запускаю test:ui:ci тесты
         run: npm run test:ui:ci
