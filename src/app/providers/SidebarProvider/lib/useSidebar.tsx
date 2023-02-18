@@ -12,7 +12,6 @@ export function useSidebar(): UseSidebarResult {
     const changeCollapsed = () => {
         const newCollapsed = !collapsed;
         setCollapsed(newCollapsed);
-        console.log(1234213423);
 
         localStorage.setItem(LOCAL_STORAGE_SIDEBAR_KEY, String(newCollapsed));
     };
