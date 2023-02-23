@@ -3,7 +3,16 @@
     color: var(--primary-color);
 }
 
+.clearInverted {
+    color: var(--inverted-secondary-color);
+    padding: 0;
+    border: none;
+    background: none;
+    outline: none;
+}
+
 .clear {
+    padding: 0;
     border: none;
     background: none;
     outline: none;

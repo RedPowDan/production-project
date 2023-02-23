@@ -38,3 +38,16 @@ Outline.args = {
     theme: ThemeButton.OUTLINE,
 };
 Outline.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const ClearInverted = Template.bind({ });
+OutlineLight.args = {
+    children: 'Text',
+    theme: ThemeButton.CLEAR_INVERTED,
+};
+
+export const ClearInvertedDark = Template.bind({ });
+Outline.args = {
+    children: 'Text',
+    theme: ThemeButton.CLEAR_INVERTED,
+};
+Outline.decorators = [ThemeDecorator(Theme.DARK)];
