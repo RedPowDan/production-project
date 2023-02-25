@@ -2,6 +2,7 @@ import React from 'react';
 import { ComponentStory, ComponentMeta, addDecorator } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
+import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 import { Navbar } from './Navbar';
 
 export default {
@@ -23,3 +24,12 @@ Dark.args = {
 };
 
 Dark.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const DarkIsAuth = Template.bind({});
+DarkIsAuth.args = {
+};
+
+DarkIsAuth.decorators = [StoreDecorator({
+    user: { authData: {} },
+})];
+DarkIsAuth.decorators = [ThemeDecorator(Theme.DARK)];

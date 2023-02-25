@@ -51,3 +51,16 @@ Outline.args = {
     theme: ThemeButton.CLEAR_INVERTED,
 };
 Outline.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const DisabledInvertedDark = Template.bind({ });
+Outline.args = {
+    children: 'Text',
+    disabled: true,
+};
+DisabledInvertedDark.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const DisabledInverted = Template.bind({ });
+Outline.args = {
+    children: 'Text',
+    disabled: true,
+};

@@ -1,11 +1,13 @@
 import { addDecorator } from '@storybook/react';
-import { Theme, ThemeProvider } from '../../src/app/providers/ThemeProvider';
+import { Theme } from '../../src/app/providers/ThemeProvider';
 import { StyleDecorator } from '../../src/shared/config/storybook/StyleDecorator/StyleDecorator';
 import { ThemeDecorator } from '../../src/shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { RouteDecorator } from '../../src/shared/config/storybook/RouterDecorator/RouterDecorator';
 import { SidebarDecorator }
     from '../../src/shared/config/storybook/SidebarDecorator/SidebarDecorator';
-import { StoreDecorator } from '../../src/shared/config/storybook/StoreDecorator/StoreDecorator';
+import {
+    StoreDecoratorForConfig,
+} from '../../src/shared/config/storybook/StoreDecorator/StoreDecorator';
 
 export const parameters = {
     actions: { argTypesRegex: '^on[A-Z].*' },
@@ -21,4 +23,4 @@ addDecorator(StyleDecorator);
 addDecorator(ThemeDecorator(Theme.LIGHT));
 addDecorator(RouteDecorator);
 addDecorator(SidebarDecorator);
-addDecorator(StoreDecorator);
+addDecorator(StoreDecoratorForConfig);
