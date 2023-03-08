@@ -25,7 +25,7 @@ export const loginSlice = createSlice({
                 state.error = undefined;
                 state.isLoading = true;
             })
-            .addCase(loginByUserName.fulfilled, (state, action) => {
+            .addCase(loginByUserName.fulfilled, (state) => {
                 state.isLoading = false;
             })
             .addCase(loginByUserName.rejected, (state, action) => {
@@ -36,5 +36,5 @@ export const loginSlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const { actions: loginActions } = loginSlice;
-export const { reducer: loginReducers } = loginSlice;
+export const { actions: loginAction } = loginSlice;
+export const { reducer: loginReducer } = loginSlice;
