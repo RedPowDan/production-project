@@ -3,19 +3,14 @@ import axios from 'axios';
 import { User, userActions } from 'entities/User';
 import { USER_LOCALSTORAGE_KEY } from 'shared/const/localstorage';
 
-interface LoginByUserNameProps{
+interface LoginByUserNameProps {
     username: string;
     password: string;
 }
 
-enum LoginErrors {
-    INCORRECT_DATA = '',
-    SERVER_ERROR = '',
-}
-
-export const loginByUserName = createAsyncThunk<User, LoginByUserNameProps, {rejectValue: string}>(
+export const loginByUserName = createAsyncThunk<User, LoginByUserNameProps, { rejectValue: string }>(
     'login/loginByUserName',
-    async (authData: LoginByUserNameProps, thunkAPI) => {
+    async (authData, thunkAPI) => {
         try {
             const response = await axios.post<User>('http://localhost:8000/login', authData);
 
