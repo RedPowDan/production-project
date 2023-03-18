@@ -37,25 +37,6 @@
     flex-direction: column;
 }
 
-.item {
-    padding-left: 20px;
-    margin-top: 10px;
-    display: flex;
-    align-items: center;
-    border-top: 0 solid var(--border-color);
-    transition: 0.1s border-top-width;
-}
-
-.icon {
-    fill: var(--inverted-secondary-color);
-}
-
-.link {
-    margin-left: 10px;
-    opacity: 1;
-    transition: 4s opacity;
-}
-
 .collapsed {
     width: var(--sidebar-width-collapsed);
 

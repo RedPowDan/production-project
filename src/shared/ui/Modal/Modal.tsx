@@ -54,6 +54,10 @@ export const Modal = (props: ModalProps) => {
         if (e.key === 'Escape') {
             closeHandler();
         }
+
+        if (e.key === 'Enter') {
+
+        }
     }, [closeHandler]);
 
     useEffect(() => {
